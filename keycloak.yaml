@@ -33,19 +33,19 @@ spec:
       containers:
       - name: keycloak
         image: quay.io/keycloak/keycloak:11.0.1
-        env:
-        # - name: KEYCLOAK_USER
+        # env:
+        # # - name: KEYCLOAK_USER
         #   value: "admin"
         # - name: KEYCLOAK_PASSWORD
         #   value: admin"
         # - name: PROXY_ADDRESS_FORWARDING
         #   value: y
-        ports:
-        - name: http
-          containerPort: 8080
-        - name: https
-          containerPort: 8443
-        readinessProbe:
-          httpGet:
-            path: /auth/realms/master
-            port: 8080
+        # ports:
+        # - name: http
+        #   containerPort: 8080
+        # - name: https
+        #   containerPort: 8443
+        # readinessProbe:
+        #   httpGet:
+        #     path: /auth/realms/master
+        #     port: 8080
