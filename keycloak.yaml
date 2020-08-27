@@ -6,9 +6,9 @@ metadata:
     app: keycloak
 spec:
   ports:
-  - name: http
-    port: 8080
-    targetPort: 8080
+    - name: http
+      port: 8080
+      targetPort: 8080
   selector:
     app: keycloak
   type: LoadBalancer
@@ -31,21 +31,21 @@ spec:
         app: keycloak
     spec:
       containers:
-      - name: keycloak
-        image: quay.io/keycloak/keycloak:11.0.1
-        # env:
-        # # - name: KEYCLOAK_USER
-        #   value: "admin"
-        # - name: KEYCLOAK_PASSWORD
-        #   value: admin"
-        # - name: PROXY_ADDRESS_FORWARDING
-        #   value: y
-        # ports:
-        # - name: http
-        #   containerPort: 8080
-        # - name: https
-        #   containerPort: 8443
-        # readinessProbe:
-        #   httpGet:
-        #     path: /auth/realms/master
-        #     port: 8080
+        - name: keycloak
+          image: quay.io/keycloak/keycloak:11.0.1
+          # env:
+          # # - name: KEYCLOAK_USER
+          #   value: "admin"
+          # - name: KEYCLOAK_PASSWORD
+          #   value: admin"
+          # - name: PROXY_ADDRESS_FORWARDING
+          #   value: y
+          # ports:
+          # - name: http
+          #   containerPort: 8080
+          # - name: https
+          #   containerPort: 8443
+          # readinessProbe:
+          #   httpGet:
+          #     path: /auth/realms/master
+          #     port: 8080
